@@ -701,11 +701,11 @@ button.primary.inactive {
 }
 @media (max-width: 768px) {
   .camera {
-    height: 270px;
+    height: 220px;
   }
 
   .ai {
-    height: 300px;
+    height: 200px;
   }
 
   .ai-avatar {
