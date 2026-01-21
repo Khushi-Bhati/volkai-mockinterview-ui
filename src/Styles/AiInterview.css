@@ -715,6 +715,6 @@ button.primary.inactive {
 
   .container {
     min-height: 100vh;
-    overflow: hidden; /* 👈 prevents scroll */
+    overflow-y: hidden; /* 👈 prevents scroll */
   }
 }
