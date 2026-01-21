@@ -313,7 +313,6 @@ button.primary:hover {
   box-shadow: 0 0 10px #fc6901;
 }
 
-/* The circle */
 button.primary .circle {
   width: 12px;
   height: 12px;
@@ -571,14 +570,13 @@ button.primary.inactive {
   background: linear-gradient(90deg, #f86a04fd, #fa6c07f5);
   box-shadow: none;
 }
-/* GLOBAL MOBILE SAFETY */
+
 html,
 body {
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
-/* TABLET & BELOW */
 @media (max-width: 1300px) {
   .container {
     overflow-y: hidden;
@@ -705,10 +703,24 @@ body {
     margin-bottom: 80px;
   }
   .ai-heading {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 
 .repeat-circle {
   margin-right: 8px;
+}
+.text-short {
+  display: none;
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .text-full {
+    display: none;
+  }
+
+  .text-short {
+    display: inline;
+  }
 }

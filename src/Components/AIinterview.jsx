@@ -27,6 +27,7 @@ const AIinterview = () => {
   }, []);
 
   const handleScrollUp = () => {
+    console.log("Scroll up clicked");
     setShowQuestions(true);
   };
 
@@ -310,7 +311,9 @@ const AIinterview = () => {
               class={`primary ${buttonActive ? "recording" : "inactive"}`}
             >
               <span class="circle"></span>
-              Start Recording Answer
+
+              <span class="text-full">Start Recording Answer</span>
+              <span class="text-short">Record</span>
             </button>
 
             <button className="second-btn">
@@ -372,4 +375,3 @@ const AIinterview = () => {
 };
 
 export default AIinterview;
-
