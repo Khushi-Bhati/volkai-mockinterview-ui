@@ -67,19 +67,16 @@ const AIinterview = () => {
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
-                      width="30"
-                      height="30"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="1.5"
+                      stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
+                      width="50"
+                      height="50"
                     >
-                      <rect x="3" y="7" width="18" height="14" rx="2" />
-
-                      <path d="M8 7l1.5-3h5L16 7" />
-
-                      <circle cx="12" cy="14" r="3.5" />
+                      <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                      <circle cx="12" cy="13" r="3" />
                     </svg>
                   </div>
                 </div>
@@ -210,6 +207,7 @@ const AIinterview = () => {
               </span>
             </section>
             <div className="line-one"></div>
+
             <aside className={`panel questions ${showQuestions ? "open" : ""}`}>
               <h3>Interview Questions</h3>
 
@@ -290,6 +288,7 @@ const AIinterview = () => {
               </div>
             </aside>
           </main>
+
           <div className="scroll-up" onClick={handleScrollUp}>
             <svg
               xmlns="http://www.w3.org/2000/svg"

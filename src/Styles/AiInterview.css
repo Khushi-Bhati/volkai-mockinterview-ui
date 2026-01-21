@@ -330,18 +330,19 @@ button .second-btn:hover {
 }
 
 .container .icon-circle {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
 
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 12px;
-  background-color: #ee5f0c;
+  background-color: #fd650ce7;
   isolation: isolate;
   filter: none;
   box-shadow: none;
+  z-index: 100;
 }
 
 .icon-circle svg {
@@ -567,7 +568,7 @@ button.primary.recording {
   background: #1b223f;
 }
 button.primary.inactive {
-  background: linear-gradient(90deg, #f86a04fd, #fa6c07f5);
+  background: linear-gradient(90deg, #f86a04fd, #f86902f5);
   box-shadow: none;
 }
 
@@ -611,7 +612,6 @@ body {
   }
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
   .container {
     overflow-x: hidden;
@@ -697,10 +697,10 @@ body {
     bottom: 90px;
   }
   .controls {
-    margin-bottom: 8px;
+    margin-bottom: 15px;
   }
   .record-hint {
-    margin-bottom: 80px;
+    margin-bottom: 95px;
   }
   .ai-heading {
     font-size: 12px;
@@ -714,7 +714,6 @@ body {
   display: none;
 }
 
-/* Small screens */
 @media (max-width: 640px) {
   .text-full {
     display: none;
