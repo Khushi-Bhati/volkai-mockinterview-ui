@@ -143,6 +143,7 @@ const Volkai = () => {
 
             <div class="row">
               <svg
+                class="icon"
                 width="44"
                 height="44"
                 viewBox="0 0 44 44"
