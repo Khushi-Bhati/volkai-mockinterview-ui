@@ -575,10 +575,14 @@ button.primary.inactive {
 html,
 body {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /* TABLET & BELOW */
 @media (max-width: 1300px) {
+  .container {
+    overflow-y: hidden;
+  }
   .layout {
     display: flex;
     flex-wrap: wrap;
@@ -613,7 +617,7 @@ body {
 @media (max-width: 768px) {
   .container {
     overflow-x: hidden;
-    margin-right: 30px 10px;
+    overflow-y: hidden;
   }
   .layout {
     display: flex;
@@ -644,6 +648,13 @@ body {
 
 /* SMALL MOBILE */
 @media (max-width: 530px) {
+  .container {
+    overflow: hidden;
+  }
+  .ai-avatar {
+    width: 80px;
+    height: 80px;
+  }
   .header {
     flex-wrap: wrap;
     gap: 8px;
@@ -654,6 +665,10 @@ body {
   .ai,
   .questions {
     min-height: 120px;
+  }
+
+  .camera {
+    margin-top: -20px;
   }
 
   .header-right {
@@ -682,6 +697,15 @@ body {
   .scroll-up {
     right: 14px;
     bottom: 90px;
+  }
+  .controls {
+    margin-bottom: 8px;
+  }
+  .record-hint {
+    margin-bottom: 80px;
+  }
+  .ai-heading {
+    font-size: 8px;
   }
 }
 
