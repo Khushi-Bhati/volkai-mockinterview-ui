@@ -199,44 +199,46 @@ body {
   }
 
   .wrapper {
-    padding: 14px;
+    padding: 8px;
   }
 
   .card {
     padding: 20px;
     border-radius: 14px;
   }
-
+  .list {
+    gap: 6px;
+  }
   .row {
-    gap: 12px;
-    padding: 12px;
+    gap: 5px;
+    padding: 10px;
   }
 
   .icon {
     width: 26px;
     height: 26px;
-    font-size: 13px;
+    font-size: 10px;
   }
 
   .row h4 {
-    font-size: 13.5px;
+    font-size: 11px;
   }
 
   .row span {
-    font-size: 12.5px;
+    font-size: 10px;
   }
 
   .notice {
-    font-size: 12.5px;
-    padding: 12px 14px;
+    font-size: 10px;
+    padding: 4px 4px;
   }
 
   .checkbox {
-    font-size: 12.5px;
+    font-size: 10px;
   }
 
   .cta {
-    padding: 13px;
+    padding: 10px;
     font-size: 13.5px;
   }
 }
@@ -283,14 +285,29 @@ body {
   width: 18px;
   height: 18px;
 }
-@media (max-width: 480px) {
-  .header {
-    gap: 10px;
-    padding: 10px 6px;
+@media (max-width: 430px) {
+  body {
+    overflow: hidden; /* prevents extra scroll */
+  }
+
+  .wrapper {
+    height: 100dvh; /* fixes mobile vh issue */
+    overflow: hidden;
+    margin-top: 5px;
+  }
+
+  .wrapper .header {
+    gap: 8px;
+    padding: 8px;
+    flex-wrap: wrap; /* prevents overflow */
   }
 }
+
+/* TABLET */
 @media (max-width: 768px) {
   .header {
-    gap: 12px;
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
   }
 }
