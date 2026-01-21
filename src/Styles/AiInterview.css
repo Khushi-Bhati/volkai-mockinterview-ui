@@ -566,18 +566,16 @@ button .second-btn:hover {
   border: 2px solid #c96b28;
   background-color: #e96e0a;
 
-  display: none;
+  display: flex; /* <-- REQUIRED */
 
   align-items: center;
   justify-content: center;
 
   cursor: pointer;
-  z-index: 1000;
+  z-index: 9999; /* ensure on top */
 
   box-shadow: 0 6px 16px rgba(201, 107, 40, 0.45);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .scroll-up svg {
