@@ -1,0 +1,328 @@
+import React, { useEffect, useState } from "react";
+import "./../Styles/AiInterview.css";
+
+const AIinterview = () => {
+  const [seconds, setSeconds] = useState(0);
+  const [showQuestions, setShowQuestions] = useState(false);
+  const [isSpeaking, setIsSpeaking] = useState(true);
+  const [buttonActive, setButtonActive] = useState(true);
+
+  const [status, setStatus] = useState("● AI Speaking");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setStatus("● Waiting for Response");
+      setIsSpeaking(false);
+      setButtonActive(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds((prev) => prev + 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleScrollUp = () => {
+    setShowQuestions(true);
+  };
+
+  const formatTime = (sec) => {
+    const minutes = Math.floor(sec / 60)
+      .toString()
+      .padStart(2, "0");
+    const secs = (sec % 60).toString().padStart(2, "0");
+    return `${minutes}:${secs}`;
+  };
+
+  return (
+    <>
+      <>
+        <div class="container">
+          <header className="header">
+            <div>
+              <h1>AI Mock Interview</h1>
+              <p>Real-time AI interviewer tailored to your job role</p>
+            </div>
+
+            <div className="header-right">
+              <span
+                className={`status ${isSpeaking ? "ai-speaking" : "waiting"}`}
+              >
+                {status}
+              </span>
+              <span className="timer">{formatTime(seconds)}</span>
+            </div>
+          </header>
+
+          <main class="layout">
+            <section class="panel camera">
+              <div class="camera-placeholder">
+                <div class="camera-container">
+                  <div class="icon-circle">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="30"
+                      height="30"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="3" y="7" width="18" height="14" rx="2" />
+
+                      <path d="M8 7l1.5-3h5L16 7" />
+
+                      <circle cx="12" cy="14" r="3.5" />
+                    </svg>
+                  </div>
+                </div>
+
+                <span>Camera feed will appear here</span>
+              </div>
+              <div class="camera-footer">
+                You
+                <br />
+                <span className="mid-span"> mid</span>
+              </div>
+              <div class="camera-actions">
+                <div className="icon-wrapper">
+                  {" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="13"
+                    height="13"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="3" y="7" width="18" height="14" rx="2" />
+
+                    <circle cx="12" cy="14" r="3.5" />
+
+                    <path d="M8 7l1.5-3h5L16 7" />
+                  </svg>
+                </div>
+
+                <div className="icon-wrapper">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="13"
+                    height="13"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="9" y="3" width="6" height="10" rx="3" />
+
+                    <path d="M12 13v4" />
+
+                    <path d="M8 21h8" />
+
+                    <path d="M5 11a7 7 0 0 0 14 0" />
+                  </svg>
+                </div>
+              </div>
+            </section>
+
+            <div className="line-one"></div>
+
+            <section class="panel ai">
+              <div class="ai-avatar">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 64 64"
+                  width="120"
+                  height="120"
+                >
+                  <path
+                    d="M32 14
+       C34.5 24 37 26.5 48 29
+       C37 31.5 34.5 34 32 46
+       C29.5 34 27 31.5 16 29
+       C27 26.5 29.5 24 32 14Z"
+                    fill="none"
+                    stroke="white"
+                    stroke-width="3"
+                    stroke-linejoin="round"
+                  />
+
+                  <rect
+                    x="43"
+                    y="17"
+                    width="8"
+                    height="2.5"
+                    rx="1.25"
+                    fill="white"
+                  />
+                  <rect
+                    x="45.75"
+                    y="14.25"
+                    width="2.5"
+                    height="8"
+                    rx="1.25"
+                    fill="white"
+                  />
+
+                  <rect
+                    x="18"
+                    y="37"
+                    width="7"
+                    height="2.5"
+                    rx="1.25"
+                    fill="white"
+                  />
+                  <rect
+                    x="20.25"
+                    y="34.75"
+                    width="2.5"
+                    height="7"
+                    rx="1.25"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div class="wave">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="ai-label">
+                <span className="ai-heading"> Volkai AI Interviewer</span>
+                <br />
+                Powered by Advanced AI
+              </span>
+            </section>
+            <div className="line-one"></div>
+            <aside className={`panel questions ${showQuestions ? "open" : ""}`}>
+              <h3>Interview Questions</h3>
+
+              <div class="current-question">
+                <div class="badge-row">
+                  <span class="badge">CURRENT QUESTION</span>
+
+                  <div class="svg-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="20"
+                      height="20"
+                      fill="none"
+                    >
+                      <path
+                        d="M4 9v6h4l5 4V5L8 9H4z"
+                        stroke="#ff6a00"
+                        stroke-width="2"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16 8c1.8 1.8 1.8 6.4 0 8"
+                        stroke="#ff6a00"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <p>
+                  Tell me about yourself and your experience in software
+                  development.
+                </p>
+
+                <div class="tags">
+                  <span class="tag easy">Difficulty: Easy</span>
+                  <span class="tag skill">Skill Type: Communication</span>
+                </div>
+              </div>
+
+              <div class="upcoming">
+                <h4>Upcoming Questions</h4>
+                <ul>
+                  <li>
+                    <span class="dot"></span>
+                    <div class="text">
+                      What motivated you to apply for this position?
+                      <small>Easy · Behavioral</small>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="dot"></span>
+                    <div class="text">
+                      Describe a challenging project you worked on and how you
+                      overcome obstacles.
+                      <small>Medium · Problem Solving</small>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="dot"></span>
+                    <div class="text">
+                      How do you handle tight deadlines and pressue in a
+                      fast-paced environment?
+                      <small>Medium · Stress Management</small>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="dot"></span>
+                    <div class="text">
+                      Explain a situation where you had to work witha different
+                      team memeber.
+                      <small>Hard · Teamwork</small>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+          </main>
+          <div className="scroll-up" onClick={handleScrollUp}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="6 14 12 8 18 14" />
+            </svg>
+          </div>
+
+          <footer class="controls">
+            <button
+              class={`primary ${buttonActive ? "recording" : "inactive"}`}
+            >
+              <span class="circle"></span>
+              Start Recording Answer
+            </button>
+
+            <button className="second-btn">Repeat Question</button>
+            <button className="second-btn">Exit Interview</button>
+          </footer>
+          <p class="record-hint">
+            Click "Start Recording Answer" to record your spoken response
+          </p>
+        </div>
+      </>
+    </>
+  );
+};
+
+export default AIinterview;
