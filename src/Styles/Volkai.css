@@ -193,14 +193,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  body {
-    align-items: flex-start;
-    padding-top: 24px;
-  }
-
-  .wrapper {
-    padding: 8px;
-  }
+ 
 
   .card {
     padding: 20px;
