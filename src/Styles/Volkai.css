@@ -277,15 +277,6 @@ body {
   height: 18px;
 }
 @media (max-width: 430px) {
-  body {
-    overflow: hidden;
-  }
-
-  .wrapper {
-    overflow: hidden;
-    margin-top: 5px;
-  }
-
   .wrapper .header {
     gap: 8px;
     padding: 8px;
