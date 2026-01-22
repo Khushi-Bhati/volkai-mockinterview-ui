@@ -617,10 +617,7 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
   }
-  .layout {
-    display: flex;
-    flex-direction: column;
-  }
+ 
 
   .ai-avatar {
     width: 130px;
