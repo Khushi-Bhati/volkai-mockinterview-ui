@@ -617,12 +617,7 @@ button.primary.inactive {
   .questions h3 {
     font-size: 18px;
   }
-  .controls {
-    margin-top: -10px;
-  }
-  .button {
-    margin-top: -10px;
-  }
+  
 }
 
 @media (max-width: 530px) {
