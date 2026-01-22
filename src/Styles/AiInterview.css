@@ -518,7 +518,7 @@ button .second-btn:hover {
 .scroll-up {
   
  margin-top: -50px;
-  margin-left: 70%;
+  margin-left: 78%;
 
   width: 50px;
   height: 50px;
@@ -669,9 +669,7 @@ button.primary.inactive {
     font-size: 12px;
   }
 
-  .controls {
-    margin-bottom: 15px;
-  }
+ 
   .record-hint {
     margin-bottom: 95px;
   }
