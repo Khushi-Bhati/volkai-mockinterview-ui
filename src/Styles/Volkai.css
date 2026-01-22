@@ -279,15 +279,7 @@ body {
   height: 18px;
 }
 @media (max-width: 430px) {
-  body {
-    overflow: hidden; /* prevents extra scroll */
-  }
-
-  .wrapper {
-    height: 100dvh; /* fixes mobile vh issue */
-    overflow: hidden;
-    margin-top: 5px;
-  }
+  
 
   .wrapper .header {
     gap: 8px;
