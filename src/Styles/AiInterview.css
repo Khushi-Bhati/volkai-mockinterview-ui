@@ -7,7 +7,7 @@
   flex-direction: column;
   font-family: "Inter", sans-serif;
   opacity: 1;
-  overflow-y: hidden;
+
 }
 
 .container .header {
@@ -572,16 +572,9 @@ button.primary.inactive {
   box-shadow: none;
 }
 
-html,
-body {
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
 
 @media (max-width: 1300px) {
-  .container {
-    overflow-y: hidden;
-  }
+  
   .layout {
     display: flex;
     flex-wrap: wrap;
@@ -613,10 +606,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .container {
-    overflow-x: hidden;
-    overflow-y: hidden;
-  }
+
  
 
   .ai-avatar {
@@ -636,9 +626,7 @@ body {
 }
 
 @media (max-width: 530px) {
-  .container {
-    overflow: hidden;
-  }
+
   .ai-avatar {
     width: 80px;
     height: 80px;
