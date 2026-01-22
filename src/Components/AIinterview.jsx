@@ -42,7 +42,7 @@ const AIinterview = () => {
   return (
     <>
       <>
-        <div class="container">
+        <div className="container">
           <header className="header">
             <div>
               <h1>AI Mock Interview</h1>
@@ -59,11 +59,11 @@ const AIinterview = () => {
             </div>
           </header>
 
-          <main class="layout">
-            <section class="panel camera">
-              <div class="camera-placeholder">
-                <div class="camera-container">
-                  <div class="icon-circle">
+          <main className="layout">
+            <section className="panel camera">
+              <div className="camera-placeholder">
+                <div className="camera-container">
+                  <div className="icon-circle">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -83,12 +83,12 @@ const AIinterview = () => {
 
                 <span>Camera feed will appear here</span>
               </div>
-              <div class="camera-footer">
+              <div className="camera-footer">
                 You
                 <br />
                 <span className="mid-span"> mid</span>
               </div>
-              <div class="camera-actions">
+              <div className="camera-actions">
                 <div className="icon-wrapper">
                   {" "}
                   <svg
@@ -136,8 +136,8 @@ const AIinterview = () => {
 
             <div className="line-one"></div>
 
-            <section class="panel ai">
-              <div class="ai-avatar">
+            <section className="panel ai">
+              <div className="ai-avatar">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 64 64"
@@ -191,7 +191,7 @@ const AIinterview = () => {
                   />
                 </svg>
               </div>
-              <div class="wave">
+              <div className="wave">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -200,7 +200,7 @@ const AIinterview = () => {
                 <span></span>
                 <span></span>
               </div>
-              <span class="ai-label">
+              <span className="ai-label">
                 <span className="ai-heading"> Volkai AI Interviewer</span>
                 <br />
                 Powered by Advanced AI
@@ -211,11 +211,11 @@ const AIinterview = () => {
             <aside className={`panel questions ${showQuestions ? "open" : ""}`}>
               <h3>Interview Questions</h3>
 
-              <div class="current-question">
-                <div class="badge-row">
-                  <span class="badge">CURRENT QUESTION</span>
+              <div className="current-question">
+                <div className="badge-row">
+                  <span className="badge">CURRENT QUESTION</span>
 
-                  <div class="svg-icon">
+                  <div className="svg-icon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -244,41 +244,41 @@ const AIinterview = () => {
                   development.
                 </p>
 
-                <div class="tags">
-                  <span class="tag easy">Difficulty: Easy</span>
-                  <span class="tag skill">Skill Type: Communication</span>
+                <div className="tags">
+                  <span className="tag easy">Difficulty: Easy</span>
+                  <span className="tag skill">Skill Type: Communication</span>
                 </div>
               </div>
 
-              <div class="upcoming">
+              <div className="upcoming">
                 <h4>Upcoming Questions</h4>
                 <ul>
                   <li>
-                    <span class="dot"></span>
-                    <div class="text">
+                    <span className="dot"></span>
+                    <div className="text">
                       What motivated you to apply for this position?
                       <small>Easy · Behavioral</small>
                     </div>
                   </li>
                   <li>
-                    <span class="dot"></span>
-                    <div class="text">
+                    <span className="dot"></span>
+                    <div className="text">
                       Describe a challenging project you worked on and how you
                       overcome obstacles.
                       <small>Medium · Problem Solving</small>
                     </div>
                   </li>
                   <li>
-                    <span class="dot"></span>
-                    <div class="text">
+                    <span className="dot"></span>
+                    <div className="text">
                       How do you handle tight deadlines and pressue in a
                       fast-paced environment?
                       <small>Medium · Stress Management</small>
                     </div>
                   </li>
                   <li>
-                    <span class="dot"></span>
-                    <div class="text">
+                    <span className="dot"></span>
+                    <div className="text">
                       Explain a situation where you had to work witha different
                       team memeber.
                       <small>Hard · Teamwork</small>
@@ -305,14 +305,14 @@ const AIinterview = () => {
             </svg>
           </div>
 
-          <footer class="controls">
+          <footer className="controls">
             <button
-              class={`primary ${buttonActive ? "recording" : "inactive"}`}
+              className={`primary ${buttonActive ? "recording" : "inactive"}`}
             >
-              <span class="circle"></span>
+              <span className="circle"></span>
 
-              <span class="text-full">Start Recording Answer</span>
-              <span class="text-short">Record</span>
+              <span className="text-full">Start Recording Answer</span>
+              <span className="text-short">Record</span>
             </button>
 
             <button className="second-btn">
@@ -364,7 +364,7 @@ const AIinterview = () => {
               <span>Exit Interview</span>
             </button>
           </footer>
-          <p class="record-hint">
+          <p className="record-hint">
             Click "Start Recording Answer" to record your spoken response
           </p>
         </div>

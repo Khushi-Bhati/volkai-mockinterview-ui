@@ -7,25 +7,25 @@ const Volkai = () => {
   const Navigate = useNavigate();
   return (
     <>
-      <div class="wrapper">
-        <div class="card">
-          <div class="header">
-            <div class="outer-border">
-              <div class="inner-border">
-                <div class="header-icon">i</div>
+      <div className="wrapper">
+        <div className="card">
+          <div className="header">
+            <div className="outer-border">
+              <div className="inner-border">
+                <div className="header-icon">i</div>
               </div>
             </div>
 
-            <div class="header-text">
+            <div className="header-text">
               <h2>Before You Start</h2>
               <p>Please review these important guidelines</p>
             </div>
           </div>
 
-          <div class="list">
-            <div class="row">
+          <div className="list">
+            <div className="row">
               <svg
-                class="icon"
+                className="icon"
                 width="44"
                 height="44"
                 viewBox="0 0 44 44"
@@ -56,9 +56,9 @@ const Volkai = () => {
               </div>
             </div>
 
-            <div class="row">
+            <div className="row">
               <svg
-                class="icon"
+                className="icon"
                 width="44"
                 height="44"
                 viewBox="0 0 44 44"
@@ -103,9 +103,9 @@ const Volkai = () => {
               </div>
             </div>
 
-            <div class="row">
+            <div className="row">
               <svg
-                class="icon"
+                className="icon"
                 width="44"
                 height="44"
                 viewBox="0 0 44 44"
@@ -141,9 +141,9 @@ const Volkai = () => {
               </div>
             </div>
 
-            <div class="row">
+            <div className="row">
               <svg
-                class="icon"
+                className="icon"
                 width="44"
                 height="44"
                 viewBox="0 0 44 44"
@@ -179,9 +179,9 @@ const Volkai = () => {
               </div>
             </div>
 
-            <div class="row">
+            <div className="row">
               <svg
-                class="icon"
+                className="icon"
                 width="44"
                 height="44"
                 viewBox="0 0 44 44"
@@ -204,7 +204,7 @@ const Volkai = () => {
             </div>
           </div>
 
-          <div class="notice">
+          <div className="notice">
             <strong className="record-test">Recording Notice: </strong>
             Your interview responses (audio/video) will be recorded and analyzed
             by AI to generate your performance report. Your data is processed
@@ -217,7 +217,7 @@ const Volkai = () => {
                 type="checkbox"
                 checked={accepted}
                 onChange={(e) => setAccepted(e.target.checked)}
-                className="consent-checkbox"
+                classNameName="consent-checkbox"
               />
               I understand and consent to the recording and Ai analysis of my
               interview responsses.
